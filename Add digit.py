@@ -6,3 +6,14 @@ class Solution(object):
         while num >= 10:
             num = sum(int(digit) for digit in str(num))
         return num
+
+# more efficient implementation
+# time complexity = O(1)
+# space complexity = 0(1)
+class Solution(object):
+    def addDigits(self, num):
+        if num == 0:
+            return 0
+        if num % 9 == 0:
+            return 9
+        return num % 9
